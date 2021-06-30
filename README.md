@@ -39,13 +39,32 @@ watchTurorialCallback(
 - The above function can be replicated as a Promise.
 
 1. Declare a variable `watching` and assign it a new promise object
+let watching = new Promise();
+ pass in a single callback
+ let wathcing = new Promis ((resolve, reject)=> {
+
+ });
 2. Inside of the promise constructor, declare a variable named `userWatchingLiveStream`.
+let userWathcingLiveStresm = true;
+
 3. Add a `if/else` conditional that checks if `userWatchingLiveStream` is true
+if (userWatchingLiveStream){
+        resolve ("Thumbs up and Subscribe!");
+    }else{
+        reject ("User left");
+    }
+
 4. If `userWatchingLiveStream` is true, call the `resolve` method with "Thumbs up and Subscribe!"
+if from above
+
 5. If false, call the `reject` method with "User left."
+else from above
 
 - Once you have created your new promise:
 
 1. Call `watching` and add a promise chain using `.then` and `.catch`
 2. Pass in a function callback to `.then` that takes in a message and `console.log`'s the message
 3. Pass in a function callback to `.catch` that takes in an error and `console.log`'s the error
+watching
+.then((result) => console.log(result))
+.catch((error) => console.log(error));
